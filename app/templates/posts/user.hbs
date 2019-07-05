@@ -1,0 +1,10 @@
+<ul>
+{{#each model as |user_post|}}
+<li>
+<p>{{user_post.title}}</p>
+<p>{{user_post.body}}</p>
+<p> By {{user_post.user.name}}</p>
+</li>
+{{/each}}
+</ul>
+{{outlet}}
