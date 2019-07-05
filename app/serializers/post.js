@@ -6,7 +6,6 @@ export default DS.RESTSerializer.extend({
     return this._super(store, primaryModelClass, payload, id, requestType)
   },
   normalizeArrayResponse(store, primaryModelClass, payload, id, requestType){
-    payload = {posts:payload};
     payload.posts.forEach((post)=>{
       post.user = post.userId;
       delete post.userId;
